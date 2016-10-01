@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import net.codeenergy.demo.DAO.ProductDAO;
 import net.codeenergy.demo.DTO.Product;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class ProductServiceImpl implements ProductService {
@@ -16,6 +17,7 @@ public class ProductServiceImpl implements ProductService {
 	}
 	
 	@Override
+        @Transactional
 	public Product getProduct(Integer id) {
 		// TODO Auto-generated method stub
 		return dao.getProduct(id);

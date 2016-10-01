@@ -32,7 +32,7 @@ public class HomeController {
 		
 		Product product = productService.getProduct(1);
 		
-		model.addAttribute("Product name is: ", product.getName());
+		model.addAttribute("AAA", product.getName());
 		
 		return "home";
 	}
